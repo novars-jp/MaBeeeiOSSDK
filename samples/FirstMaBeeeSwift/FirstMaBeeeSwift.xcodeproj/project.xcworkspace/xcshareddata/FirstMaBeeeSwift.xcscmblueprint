@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B4B1EC88550C6FE7C9D51567DA24A32D234FC459",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B4B1EC88550C6FE7C9D51567DA24A32D234FC459" : 0,
+    "B8D963B455540A31D94B00576AC0C20CADF254F4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "068F1151-8A7F-48F6-ADCA-879606A5AF59",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B4B1EC88550C6FE7C9D51567DA24A32D234FC459" : "MaBeee\/",
+    "B8D963B455540A31D94B00576AC0C20CADF254F4" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FirstMaBeeeSwift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MaBeeeSDK\/samples\/FirstMaBeeeSwift\/FirstMaBeeeSwift.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tksshj\/MaBeee.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B4B1EC88550C6FE7C9D51567DA24A32D234FC459"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tksshj\/README.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B8D963B455540A31D94B00576AC0C20CADF254F4"
+    }
+  ]
+}

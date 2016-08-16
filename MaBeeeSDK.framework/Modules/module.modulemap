@@ -1,0 +1,6 @@
+framework module MaBeeeSDK {
+  umbrella header "MaBeeeSDK.h"
+
+  export *
+  module * { export * }
+}
