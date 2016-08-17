@@ -19,13 +19,21 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-
-  [MaBeeeApp.instance addObserver:self selector:@selector(receiveNotification:)];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  [MaBeeeApp.instance addObserver:self selector:@selector(receiveNotification:)];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  [MaBeeeApp.instance removeObserver:self];
 }
 
 - (IBAction)scanButtonPressed:(UIButton *)sender {
