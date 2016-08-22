@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DF5EDA37641F335A4866E1ACD22EC89BCD72F139",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B8D963B455540A31D94B00576AC0C20CADF254F4" : 0,
+    "DF5EDA37641F335A4866E1ACD22EC89BCD72F139" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A073066F-75FD-438B-816A-318861CF7D58",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B8D963B455540A31D94B00576AC0C20CADF254F4" : "",
+    "DF5EDA37641F335A4866E1ACD22EC89BCD72F139" : "MaBeeeiOSSDK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ScanUISwift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "samples\/ScanUISwift\/ScanUISwift.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tksshj\/README.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B8D963B455540A31D94B00576AC0C20CADF254F4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:novars-jp\/MaBeeeiOSSDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DF5EDA37641F335A4866E1ACD22EC89BCD72F139"
+    }
+  ]
+}
