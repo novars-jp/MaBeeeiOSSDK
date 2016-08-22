@@ -28,6 +28,7 @@ class ScanTableViewController: UITableViewController {
     super.viewDidAppear(animated)
     MaBeeeApp.instance().addObserver(self, selector: #selector(receiveNotification(_:)))
     MaBeeeApp.instance().startScan({(devices: [MaBeeeDevice]!) in
+      print(devices)
       self.maBeeeDevices = devices
       self.tableView.reloadData()
     })

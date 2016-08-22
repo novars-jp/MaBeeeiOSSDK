@@ -31,6 +31,7 @@
   [super viewDidAppear:animated];
   [MaBeeeApp.instance addObserver:self selector:@selector(receiveNotification:)];
   [MaBeeeApp.instance startScan:^(NSArray<MaBeeeDevice *> *devices) {
+    NSLog(@"%@", devices);
     self.devices = devices;
     [self.tableView reloadData];
   }];
