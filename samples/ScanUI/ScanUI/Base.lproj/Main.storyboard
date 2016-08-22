@@ -21,9 +21,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SF-jF-RY1">
                                 <rect key="frame" x="36" y="52" width="35" height="30"/>
                                 <state key="normal" title="Scan"/>
-                                <connections>
-                                    <segue destination="UEh-NJ-W6a" kind="presentation" id="CFi-U4-6qa"/>
-                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kwf-t7-eDz">
                                 <rect key="frame" x="34" y="114" width="532" height="31"/>
@@ -44,6 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="365" y="470"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="MCk-LJ-M7B">

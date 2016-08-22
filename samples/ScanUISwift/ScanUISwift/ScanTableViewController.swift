@@ -33,6 +33,12 @@ class ScanTableViewController: UITableViewController {
     })
   }
 
+  override func viewWillDisappear(animated: Bool) {
+    super.viewDidAppear(animated)
+    MaBeeeApp.instance().removeObserver(self)
+    MaBeeeApp.instance().stopScan()
+  }
+
   func receiveNotification(notification: NSNotification) {
     self.tableView.reloadData()
   }
