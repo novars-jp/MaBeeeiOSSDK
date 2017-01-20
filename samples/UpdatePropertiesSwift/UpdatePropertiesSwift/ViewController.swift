@@ -23,26 +23,26 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     MaBeeeApp.instance().addObserver(self, selector: #selector(ViewController.receiveNotification(_:)))
   }
 
-  override func viewWillDisappear(animated: Bool) {
+  override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     MaBeeeApp.instance().removeObserver(self)
   }
 
-  func receiveNotification(notification: NSNotification) {
+  func receiveNotification(_ notification: Notification) {
     switch notification.name {
-    case MaBeeeDeviceRssiDidUpdateNotification:
+    case NSNotification.Name.MaBeeeDeviceRssiDidUpdate:
       if let identifier = notification.userInfo?["MaBeeeDeviceIdentifier"] as? UInt,
-        device = MaBeeeApp.instance().deviceWithIdentifier(identifier) {
+        let device = MaBeeeApp.instance().device(withIdentifier: identifier) {
           appendLine(device.name + " RSSI : " + String(device.rssi))
         }
-    case MaBeeeDeviceBatteryVoltageDidUpdateNotification:
+    case NSNotification.Name.MaBeeeDeviceBatteryVoltageDidUpdate:
       if let identifier = notification.userInfo?["MaBeeeDeviceIdentifier"] as? UInt,
-        device = MaBeeeApp.instance().deviceWithIdentifier(identifier) {
+        let device = MaBeeeApp.instance().device(withIdentifier: identifier) {
         appendLine(device.name + " Volgate : " + String(device.batteryVoltage))
       }
     default:
@@ -50,16 +50,16 @@ class ViewController: UIViewController {
     }
   }
 
-  func appendLine(line: String) {
+  func appendLine(_ line: String) {
     textView.text = textView.text + line + "\n"
   }
 
-  @IBAction func scanButtnPressed(sender: UIButton) {
+  @IBAction func scanButtnPressed(_ sender: UIButton) {
     let vc = MaBeeeScanViewController()
     vc.show(self)
   }
 
-  @IBAction func updateButtonPressed(sender: UIButton) {
+  @IBAction func updateButtonPressed(_ sender: UIButton) {
     for device in MaBeeeApp.instance().devices() {
       device.updateRssi()
       device.updateBatteryVoltage()

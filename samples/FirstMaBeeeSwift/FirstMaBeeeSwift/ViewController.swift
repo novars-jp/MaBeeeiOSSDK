@@ -22,12 +22,12 @@ class ViewController: UIViewController {
   }
 
 
-  @IBAction func scanButtonPressed(sender: UIButton) {
+  @IBAction func scanButtonPressed(_ sender: UIButton) {
     let vc = MaBeeeScanViewController()
     vc.show(self)
   }
 
-  @IBAction func sliderValueChanged(slider: UISlider) {
+  @IBAction func sliderValueChanged(_ slider: UISlider) {
     for device in MaBeeeApp.instance().devices() {
       device.pwmDuty = Int32(slider.value * 100)
     }

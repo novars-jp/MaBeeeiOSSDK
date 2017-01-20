@@ -15,44 +15,44 @@ class ScanTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
                                                             target: self,
                                                             action: #selector(doneButtonPressed))
   }
 
   func doneButtonPressed() {
-    self.dismissViewControllerAnimated(true, completion: nil)
+    self.dismiss(animated: true, completion: nil)
   }
 
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     MaBeeeApp.instance().addObserver(self, selector: #selector(receiveNotification(_:)))
-    MaBeeeApp.instance().startScan({(devices: [MaBeeeDevice]!) in
-      print(devices)
+    MaBeeeApp.instance().startScan({(devices: [MaBeeeDevice]?) in
+      print(devices ?? "nil")
       self.maBeeeDevices = devices
       self.tableView.reloadData()
     })
   }
 
-  override func viewWillDisappear(animated: Bool) {
+  override func viewWillDisappear(_ animated: Bool) {
     super.viewDidAppear(animated)
     MaBeeeApp.instance().removeObserver(self)
     MaBeeeApp.instance().stopScan()
   }
 
-  func receiveNotification(notification: NSNotification) {
+  func receiveNotification(_ notification: Notification) {
     self.tableView.reloadData()
   }
 
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if let devices = maBeeeDevices {
       return devices.count;
     }
     return 0;
   }
 
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("MaBeeeDeviceCell", forIndexPath: indexPath)
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "MaBeeeDeviceCell", for: indexPath)
     if let device = maBeeeDevices?[indexPath.row] {
       cell.textLabel?.text = String(format: "%@, %d, %@",
                                     device.name,
@@ -62,29 +62,29 @@ class ScanTableViewController: UITableViewController {
     return cell;
   }
 
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
     if let device = maBeeeDevices?[indexPath.row] {
       switch (device.state) {
-      case .Disconnected:
+      case .disconnected:
         MaBeeeApp.instance().connect(device)
-      case .Connecting:
+      case .connecting:
         MaBeeeApp.instance().disconnect(device)
-      case .Connected:
+      case .connected:
         MaBeeeApp.instance().disconnect(device)
       }
     }
   }
 
 
-  func stateString(state: MaBeeeDeviceState) -> String {
+  func stateString(_ state: MaBeeeDeviceState) -> String {
     var stateString: String
     switch (state) {
-    case .Disconnected:
+    case .disconnected:
       stateString = "Disconnected"
-    case .Connecting:
+    case .connecting:
       stateString = "Connecting"
-    case .Connected:
+    case .connected:
       stateString = "Connected"
     }
     return stateString

@@ -21,8 +21,7 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-
-  @IBAction func sliderValueChanged(sender: UISlider) {
+  @IBAction func sliderValueChanged(_ sender: UISlider) {
     for device in MaBeeeApp.instance().devices() {
       device.pwmDuty = Int32(sender.value * 100)
     }
