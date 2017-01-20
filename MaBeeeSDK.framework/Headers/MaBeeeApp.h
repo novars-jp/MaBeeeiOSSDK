@@ -5,6 +5,7 @@
 extern NSString *MaBeeeCentralManagerDidUpdateNotification;
 extern NSString *MaBeeeDeviceDidConnectNotification;
 extern NSString *MaBeeeDeviceDidDisconnectNotification;
+extern NSString *MaBeeeDeviceDisconnectModeDidUpdateNotification;
 extern NSString *MaBeeeDeviceRssiDidUpdateNotification;
 extern NSString *MaBeeeDeviceBatteryVoltageDidUpdateNotification;
 
@@ -24,7 +25,11 @@ typedef void (^MaBeeeScanHandler)(NSArray<MaBeeeDevice *> *devices);
 - (void)removeObserver:(id)observer;
 
 // Properties
+#if TARGET_OS_IPHONE
+- (CBManagerState)centralManagerState;
+#else
 - (CBCentralManagerState)centralManagerState;
+#endif
 
 // Devices
 - (NSArray<MaBeeeDevice *> *)devices;

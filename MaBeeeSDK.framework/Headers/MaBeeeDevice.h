@@ -6,6 +6,11 @@ typedef NS_ENUM(NSInteger, MaBeeeDeviceState) {
   MaBeeeDeviceStateConnected
 };
 
+typedef NS_ENUM(NSInteger, MaBeeeDeviceDisconnectMode) {
+  MaBeeeDeviceDisconnectModeReset,
+  MaBeeeDeviceDisconnectModeContinue
+};
+
 @interface MaBeeeDevice : NSObject
 @property (readonly, nonatomic) NSUInteger identifier;
 @property (readonly, nonatomic, strong) NSString *peripheralId;
@@ -16,6 +21,7 @@ typedef NS_ENUM(NSInteger, MaBeeeDeviceState) {
 @property (readonly, nonatomic) NSDate *batteryVoltageUpdatedAt;
 @property (readonly, nonatomic) MaBeeeDeviceState state;
 @property (nonatomic) int pwmDuty;
+@property (nonatomic) MaBeeeDeviceDisconnectMode disconnectMode;
 - (void)updateRssi;
 - (void)updateBatteryVoltage;
 @end
