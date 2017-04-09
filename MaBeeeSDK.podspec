@@ -11,13 +11,9 @@ Pod::Spec.new do |s|
   s.author = 'Novars Inc.'
   s.platform = :ios
 
-  s.source = { 
-    :git => 'https://github.com/novars-jp/MaBeeeiOSSDK.git', 
-    :commit => '0514d29f155fb71331b1e95158a3e7706d6bc9e8'
-    # FIXME: Should use :tag instead of :commit.
-    # See the result of following command: `pod spec lint MaBeeeSDK.podspec`
-    #  (It says 'WARN  | source: Git sources should specify a tag.')
-    # :tag => 'v1.5.0' 
+  s.source = {
+    :git => 'https://github.com/novars-jp/MaBeeeiOSSDK.git',
+    :tag => 'v1.5.0'
   }
   s.platform = :ios
   s.ios.deployment_target = '8.0'
@@ -34,4 +30,3 @@ Pod::Spec.new do |s|
 
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/MaBeeeSDK"' }
 end
-
