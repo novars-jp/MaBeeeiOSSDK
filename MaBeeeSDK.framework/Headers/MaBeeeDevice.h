@@ -21,7 +21,11 @@ typedef NS_ENUM(NSInteger, MaBeeeDeviceDisconnectMode) {
 @property (readonly, nonatomic) NSDate *batteryVoltageUpdatedAt;
 @property (readonly, nonatomic) MaBeeeDeviceState state;
 @property (nonatomic) int pwmDuty;
+@property (nonatomic) int pwmPeriod;
 @property (nonatomic) MaBeeeDeviceDisconnectMode disconnectMode;
 - (void)updateRssi;
 - (void)updateBatteryVoltage;
+- (void)setPioSettings:(int)port mode:(int)mode;
+- (void)setPioPullUps:(int)port mode:(int)mode;
+- (void)setPioOutputs:(int)port mode:(int)mode;
 @end

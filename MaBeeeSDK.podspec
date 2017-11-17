@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'MaBeeeSDK'
-  s.version = '1.5.0'
+  s.version = '2.0.0'
   s.summary = 'MaBeee SDK for iOS.'
   s.description = 'Official MaBeee SDK for iOS.'
   s.homepage = 'http://developer.novars.jp/'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.source = {
     :git => 'https://github.com/novars-jp/MaBeeeiOSSDK.git',
-    :tag => 'v1.5.0'
+    :tag => 'v2.0.0'
   }
   s.platform = :ios
   s.ios.deployment_target = '8.0'

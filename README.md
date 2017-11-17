@@ -26,14 +26,14 @@ MaBeeeiOSSDKはMaBeeeをiOSから使用するためのSDKです。
 
 - とりあえず最も簡単にMaBeeeを使ってみるのが目的のプロジェクトです。
 - ソースコード１０行くらいで、MaBeeeの出力をスライダーで変更できます。
-- FirstMaBeee(Objctive-C), FirstMaBeeeSwift(Swift)です。
+- FirstMaBeee(Objective-C), FirstMaBeeeSwift(Swift)です。
 
 
 ### [UpdateProperties](https://github.com/novars-jp/MaBeeeiOSSDK/wiki/UpdateProperties)
 
 - RSSI, Battery voltageの値を取得、更新するサンプルです。
 - MaBeeeAppからのプロパティ以外の更新通知についても説明します。
-- UpdateProperties(Objctive-C), UpdatePropertiesSwift(Swift)です。
+- UpdateProperties(Objcetive-C), UpdatePropertiesSwift(Swift)です。
 
 
 ### [ScanUI](https://github.com/novars-jp/MaBeeeiOSSDK/wiki/ScanUI)
@@ -54,3 +54,11 @@ MaBeeeiOSSDKはMaBeeeをiOSから使用するためのSDKです。
 - [MaBeeeDevice](https://github.com/novars-jp/MaBeeeiOSSDK/wiki/MaBeeeDevice)
 - [MaBeeeScanViewController](https://github.com/novars-jp/MaBeeeiOSSDK/wiki/MaBeeeScanViewController)
 
+## アップデート
+
+- バージョンはMaBeee.framework/Info.plistをご確認ください
+
+### バージョン2.0
+
+- MaBeee.framework バージョン2.0からPWM周期が設定可能になりました。これによりサーボモータのコントロールが可能になります。
+- MaBeeeDevice.hのpwmPeriodプロパティに値を設定してください。
