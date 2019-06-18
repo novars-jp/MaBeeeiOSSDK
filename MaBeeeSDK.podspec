@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name = 'MaBeeeSDK'
-  s.version = '2.0.0'
+  s.version = '2.0.1'
   s.summary = 'MaBeee SDK for iOS.'
   s.description = 'Official MaBeee SDK for iOS.'
   s.homepage = 'http://developer.novars.jp/'
   s.license = {
     :type => 'Copyright',
-    :text => 'Copyright 2017 Novars Inc.'
+    :text => 'Copyright 2019 Novars Inc.'
   }
   s.author = 'Novars Inc.'
   s.platform = :ios
